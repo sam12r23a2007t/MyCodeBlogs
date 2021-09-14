@@ -1,0 +1,36 @@
+.container-main{
+    min-height: 89vh;
+}
+.border{
+    border: 2px dashed black;
+    border-radius: 8px;
+}
+.center{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.c{
+    border: 2px dashed black;
+    background-color: 10px;
+    background-color: rgb(86, 166, 240);
+    color: black;
+    padding: 20px 30px;
+    text-align: center;
+}
+.c-2{
+    border: 2px dashed black;
+    background-color: 10px;
+    background-color: rgb(30, 93, 151);
+    color: black;
+    padding: 20px 30px;
+    margin: 20px 30px;
+    text-align: center;
+}
+.b{
+    word-wrap: break-word;
+}
+.abc{
+    margin-top: -150px;
+    border-radius: 50%;
+}
