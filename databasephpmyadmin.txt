@@ -1,0 +1,28 @@
+commands
+1. create a database name mycodeblogs
+2. command of creating table
+    CREATE TABLE `mycodeblogs`.`users` ( `sno` INT NOT NULL AUTO_INCREMENT ,  `uname` VARCHAR(5000) NOT NULL ,  `email` VARCHAR(5000) NOT NULL ,  `address` TEXT NOT NULL ,  `phone` VARCHAR(50000) NOT NULL ,  `password` VARCHAR(500000) NOT NULL ,    PRIMARY KEY  (`sno`)) ENGINE = InnoDB;
+3. command
+    INSERT INTO `users` (`sno`, `uname`, `email`, `address`, `phone`, `password`) VALUES ('1', 'example username', 'example@email.com', 'example address', 'example phone number', 'example password');
+4. command
+    CREATE TABLE `mycodeblogs`.`blogs` ( `sno` INT NOT NULL AUTO_INCREMENT ,  `title` VARCHAR(50000) NOT NULL ,  `descr` MEDIUMTEXT NOT NULL ,  `posted_by` VARCHAR(50000) NOT NULL ,  `posted_on` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,    PRIMARY KEY  (`sno`)) ENGINE = InnoDB;
+5. command
+    INSERT INTO `blogs` (`sno`, `title`, `descr`, `posted_by`, `posted_on`) VALUES ('1', 'sample post', 'sample post', 'sample user', current_timestamp());
+6. command
+    ALTER TABLE `users`  ADD `description` TEXT NOT NULL  AFTER `password`;
+7. command
+    CREATE TABLE `mycodeblogs`.`comments` ( `sno` INT NOT NULL AUTO_INCREMENT ,  `title` VARCHAR(50000) NOT NULL ,  `descr` TEXT NOT NULL ,  `comented_by` VARCHAR(50000) NOT NULL ,  `comented_on` DATE NOT NULL ,  `con_comment` VARCHAR(500000) NOT NULL ,    PRIMARY KEY  (`sno`)) ENGINE = InnoDB;
+8. command
+    ALTER TABLE `comments` DROP `title`;
+9. command
+    Set commented_on as a CURRENT_TIMESTAMP
+10. command
+    ALTER TABLE `users` ADD FULLTEXT(`uname`);
+11. command
+    CREATE TABLE `mycodeblogs`.`contact` ( `sno` INT NOT NULL AUTO_INCREMENT ,  `email` VARCHAR(5000) NOT NULL ,  `uname` VARCHAR(5000) NOT NULL ,  `number` INT(20) NOT NULL ,  `address` VARCHAR(5000) NOT NULL ,  `content` LONGTEXT NOT NULL ,  `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,    PRIMARY KEY  (`sno`)) ENGINE = InnoDB;
+12. command
+    INSERT INTO `contact` (`sno`, `email`, `uname`, `number`, `address`, `content`, `date`) VALUES ('1', 'abc', 'abc', '123456789', 'asdfdfdfsaf', 'asfdasfasfddaf', current_timestamp());
+13. command
+    INSERT INTO `contact` (`sno`, `email`, `uname`, `number`, `address`, `content`, `date`) VALUES ('2', 'asdf', 'asdf', '123456789', 'advffds', 'vdsa', current_timestamp());
+14. command
+    INSERT INTO `contact` (`sno`, `email`, `uname`, `number`, `address`, `content`, `date`) VALUES ('1', 'asd', 'asdf', '123456789', 'xzce', 'wddscds', current_timestamp());
